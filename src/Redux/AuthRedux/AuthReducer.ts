@@ -18,7 +18,7 @@ interface IstateType{
 
 
 
-export const authReducer = (state:IstateType = initalState, action: AnyAction):IstateType => {
+export const AuthReducer = (state:IstateType = initalState, action: AnyAction):IstateType => {
 	const { type, payload } = action;
 
 	switch (type) {
