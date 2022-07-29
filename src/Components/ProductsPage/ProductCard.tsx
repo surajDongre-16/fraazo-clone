@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import React from "react";
-import "../ProductPage.css";
+import "./ProductPage.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import AddToCartButton from "./AddToCartButton";
 import InfoIcon from '@mui/icons-material/Info';

@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { useState } from "react";
-import "../ProductPage.css";
+import "./ProductPage.css";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const AddToCartButton = ({ product }: any) => {
