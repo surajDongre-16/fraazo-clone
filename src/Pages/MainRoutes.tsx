@@ -4,7 +4,7 @@ import CartPage from "./CartPage";
 import HomePage from "./HomePage";
 import LoginPage from "./LoginPage";
 import PaymentPage from "./PaymentPage";
-import ProductsPage from "./ProductsPage";
+import ProductPage from "./ProductPage";
 import SingleProductPage from "./SingleProductPage";
 
 const MainRoutes = () => {
@@ -12,7 +12,7 @@ const MainRoutes = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/products" element={<ProductsPage />} />
+      <Route path="/products" element={<ProductPage />} />
       <Route path="/products/:id" element={<SingleProductPage />} />
       <Route
         path="/cart"
