@@ -1,6 +1,10 @@
 import React from 'react'
 
-const ReqAuth = () => {
+interface IReqAuth{
+  children:JSX.Element
+}
+
+const ReqAuth = ({children}:IReqAuth) => {
   return (
     <div>ReqAuth</div>
   )

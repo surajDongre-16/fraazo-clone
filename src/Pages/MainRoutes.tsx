@@ -1,5 +1,3 @@
-import { Box } from "@mui/material";
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ReqAuth from "../Components/ReqAuth";
 import CartPage from "./CartPage";

@@ -1,8 +1,8 @@
 import { Box } from "@mui/system";
 import React from "react";
-import Filter from "./Filter";
-import ProductList from "./ProductList";
-import "./ProductPage.css";
+import Filter from "../Components/ProductsPage/Filter";
+import ProductList from "../Components/ProductsPage/ProductList";
+import "../Components/ProductsPage/ProductPage.css";
 
 const ProductPage = () => {
 	return (
