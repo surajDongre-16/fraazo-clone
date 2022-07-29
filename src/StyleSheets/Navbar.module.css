@@ -1,0 +1,49 @@
+.searchImg {
+  width: 30px;
+  position: absolute;
+  left: 93%;
+  top: 15%;
+}
+.searchInput {
+  background-color: #f9f9f9;
+  width: 80%;
+  height: 80%;
+  border: none;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 15px;
+  outline: none;
+}
+.navbarIcon {
+  color: #999999;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.superlative{
+    background-color: #69c5a0;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    text-align: center;
+    color:white;
+    font-weight: bolder;
+    margin-left: 30%;
+    margin-bottom: -10%;
+}
+.superlativeCredit{
+    background-color: #69c5a0;
+    border-radius: 5px;
+    width: 25px;
+    height: 18px;
+    font-size: 10px;
+    text-align: center;
+    color:white;
+    font-weight: bolder;
+    margin-left: 5%;
+    margin-bottom: -5%;
+}
