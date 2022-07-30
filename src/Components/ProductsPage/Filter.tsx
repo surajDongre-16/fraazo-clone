@@ -21,7 +21,7 @@ const Filter = () => {
 		<Box id="Filter">
 			<Accordion
                 disableGutters
-                sx={{boxShadow:"none",marginBottom:"0px",borderBottom:" 1px solid rgb(229, 228, 228)"}}
+                sx={{boxShadow:"none",marginBottom:"0px",borderBottom:" 1px solid rgb(235, 235, 235)"}}
 				expanded={expanded === "panel1"}
 				onChange={() => handleChange("panel1")}
 			>
@@ -63,7 +63,7 @@ const Filter = () => {
 
 			<Accordion
                 disableGutters
-                sx={{boxShadow:"none",marginBottom:"0px",borderBottom:" 1px solid rgb(229, 228, 228)"}}
+                sx={{boxShadow:"none",marginBottom:"0px",borderBottom:" 1px solid rgb(235, 235, 235)"}}
 				expanded={expanded !== "panel1"}
 				onChange={() => handleChange("panel1")}
 			>

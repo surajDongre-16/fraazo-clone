@@ -37,9 +37,9 @@ const ProductList = () => {
 					>
 						Core
 					</Link>
-					<Typography color="text.primary">Breadcrumbs</Typography>
+					<Typography sx={{fontSize:"14px"}} color="text.primary">Breadcrumbs</Typography>
 				</Breadcrumbs>
-				<Typography sx={{ height: "40px" }} color="text.primary">
+				<Typography sx={{ height: "40px"}} color="text.primary">
 					Exotic Fruits
 				</Typography>
 				<Box id="productList">{products.map((ele,indx) => <ProductCard key={indx} product={ele}/>)}</Box>

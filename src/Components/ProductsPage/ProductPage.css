@@ -1,153 +1,151 @@
-#productNav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    border-top: 1px solid rgb(207, 206, 206) ;
-    border-bottom: 1px solid rgb(207, 206, 206) ;
+#productNav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid rgb(232, 231, 231);
+	border-bottom: 1px solid rgb(232, 231, 231);
 }
 
-#productNav>div{
-    padding:0px 20px
+#productNav > div {
+	padding: 0px 20px;
 }
 
-#ProductPageBody{
-    padding: 60px 30px;
-    padding-left: 0px;
-    display: grid;
-    grid-template-columns: 280px auto;
-    gap:30px
+#ProductPageBody {
+	padding: 38px 30px;
+	padding-left: 10px;
+	display: grid;
+	grid-template-columns: 280px auto;
+	gap: 20px;
 }
 
-
-#productList{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap:30px
+#productList {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 25px 40px;
 }
 
-#productList>div{
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+#productList > div {
+	border-radius: 4px;
+	box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+		rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+	transition: box-shadow 0.8s;
 }
 
-#productList>div:hover{
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+#productList > div > img {
+	aspect-ratio: 16/14.8;
 }
 
-
-.filterchild{
-    display: flex;
-    border-top: 1px solid rgb(229, 228, 228);
-    border-right: 1px solid rgb(229, 228, 228);
-    height: 50px;
-    align-items: center;
-    margin-left: 20px;
-    padding-left: 18px;
+#productList > div:hover {
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+		rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-#ProductCard{
-    padding: 0px 16px;
+.filterchild {
+	display: flex;
+	border-top: 1px solid rgb(235, 235, 235);
+	border-right: 1px solid rgb(235, 235, 235);
+	height: 50px;
+	align-items: center;
+	margin-left: 20px;
+	padding-left: 18px;
 }
 
-#ProductCard:hover{
-    cursor: pointer;
+#ProductCard {
+	padding: 0px 16px;
 }
 
-#ProductCard>p{
-    margin: 0px 0px 20px;
-    color:rgb(165, 165, 165)
+#ProductCard:hover {
+	cursor: pointer;
 }
 
-#ProductCard>div{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
+#ProductCard > p {
+	margin: 0px 0px 20px;
+	color: rgb(165, 165, 165);
 }
 
-#ProductCard>div>div>p:first-child{
-    margin-bottom: 0px;
-    margin-top: 4px;
-    padding-left: 2px;
-    font-size: 14px;
-    opacity: 0.6;
+#ProductCard > div {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
 }
 
-#ProductCard>div>div>p:last-child{
-    margin-top: 4px;
-    margin-bottom: 10px;
+#ProductCard > div > div > p:first-child {
+	margin-bottom: 0px;
+	margin-top: 4px;
+	padding-left: 2px;
+	font-size: 14px;
+	opacity: 0.6;
 }
 
-#addButton{
-    border-radius: 18px;
-    font-size: 14px;
-    padding: 2px 14px;
-    color: #02cb7b;
-    border: 1px solid #00ba70;
+#ProductCard > div > div > p:last-child {
+	margin-top: 4px;
+	margin-bottom: 10px;
 }
 
-#addButton:hover{
-    color:white;
-    background-color:#4fbb90;
+#addButton {
+	border-radius: 18px;
+	font-size: 14px;
+	padding: 2px 14px;
+	color: #02cb7b;
+	border: 1px solid #00ba70;
 }
 
-#reduceButton{
-    border-radius: 13px 0px 0px 13px ;
-    font-size: 30px;
-    line-height: 22px;
-    padding: 0px 0px 4px 3px;
-    min-width: 30px;
-    color: #02cb7b;
-    border: 1px solid #00ba70;
+#addButton:hover {
+	color: white;
+	background-color: #4fbb90;
 }
 
-#reduceButton~span{
-    padding: 0px 12px;
+#reduceButton {
+	border-radius: 13px 0px 0px 13px;
+	font-size: 30px;
+	line-height: 22px;
+	padding: 0px 0px 4px 3px;
+	min-width: 30px;
+	color: #02cb7b;
+	border: 1px solid #00ba70;
 }
 
-#reduceButton:hover{
-    color:white;
-    background-color:#4fbb90;
+#reduceButton ~ span {
+	padding: 0px 12px;
 }
 
-#increaseButton{
-    border-radius: 0px 13px 13px 0px;
-    font-size: 22px;
-    line-height: 22px;
-    min-width: 30px;
-    padding: 2px 4px 2px 0px;
-    color: #02cb7b;
-    border: 1px solid #00ba70;
+#reduceButton:hover {
+	color: white;
+	background-color: #4fbb90;
 }
 
-#increaseButton:hover{
-    color:white;
-    background-color:#4fbb90;
+#increaseButton {
+	border-radius: 0px 13px 13px 0px;
+	font-size: 22px;
+	line-height: 22px;
+	min-width: 30px;
+	padding: 2px 4px 2px 0px;
+	color: #02cb7b;
+	border: 1px solid #00ba70;
 }
 
-.noDiscount{
-    opacity: 0;
-    height: 20px;
+#increaseButton:hover {
+	color: white;
+	background-color: #4fbb90;
 }
 
-.discount{
-    height: 24px;
-    color:white;
-    background-color: #fe6d0f;
-    border-top-left-radius: 4px ;
-    max-width:fit-content;
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: -16px;
-    padding: 0px 10px;
-    border-bottom-right-radius: 12px;
+.noDiscount {
+	opacity: 0;
+	height: 20px;
 }
 
-
-
-
-
-
-
+.discount {
+	height: 24px;
+	color: white;
+	background-color: #fe6d0f;
+	border-top-left-radius: 4px;
+	max-width: fit-content;
+	font-size: 14px;
+	font-weight: 600;
+	margin-left: -16px;
+	padding: 0px 10px;
+	border-bottom-right-radius: 12px;
+}
