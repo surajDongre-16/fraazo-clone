@@ -1,10 +1,16 @@
-import React from 'react'
-import Navbar from '../Components/HomePage/Navbar'
+import React from "react";
+import CenterBox from "../Components/HomePage/CenterBox";
+import Navbar from "../Components/HomePage/Navbar";
+import TopBox from "../Components/HomePage/TopBox";
 
 const HomePage = () => {
   return (
-    <Navbar/>
-  )
-}
+    <>
+      <Navbar />
+      <TopBox />
+      <CenterBox/>
+    </>
+  );
+};
 
-export default HomePage
+export default HomePage;

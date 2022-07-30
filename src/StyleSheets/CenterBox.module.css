@@ -1,0 +1,15 @@
+.centerBox{
+    width: 90%;
+    border: 1px solid;
+    height: 100vh;
+    margin: 3% auto;
+}
+.carousalBox{
+    display:flex;
+    border: 1px solid;
+    flex-direction: column;
+
+}
+.carousalBox img{
+    background-color: #f9f9f9;
+}

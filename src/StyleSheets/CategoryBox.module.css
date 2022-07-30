@@ -1,0 +1,37 @@
+.mainBox {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  color: gray;
+}
+
+.subCategory {
+  border: 1px solid;
+  height: 100px;
+  width: 120px;
+  position: absolute;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.subCategoryVeggies {
+  border: 1px solid;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.textColor{
+    color:green
+}
