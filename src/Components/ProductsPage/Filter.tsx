@@ -13,6 +13,21 @@ import AddIcon from "@mui/icons-material/Add";
 const Filter = () => {
 	const [expanded, setExpanded] = useState<string | false>("panel1");
 
+	const fruitFilter = [
+		"Exotic Fruits",
+		"Fresh Fruits",
+		"Fruite Combos",
+		"Mangoes",
+	];
+
+	const vegFilter = [
+		"Daily Veggies",
+		"Herbs & Leafies",
+		"Exotic Vegetables",
+		"Cuts,Peeled & Sproutes",
+		"Vegetable Combos",
+	];
+
 	const handleChange = (x: string) => {
 		setExpanded(false);
 	};
@@ -20,8 +35,12 @@ const Filter = () => {
 	return (
 		<Box id="Filter">
 			<Accordion
-                disableGutters
-                sx={{boxShadow:"none",marginBottom:"0px",borderBottom:" 1px solid rgb(235, 235, 235)"}}
+				disableGutters
+				sx={{
+					boxShadow: "none",
+					marginBottom: "0px",
+					borderBottom: " 1px solid rgb(235, 235, 235)",
+				}}
 				expanded={expanded === "panel1"}
 				onChange={() => handleChange("panel1")}
 			>
@@ -34,36 +53,24 @@ const Filter = () => {
 					<Typography>Fruits</Typography>
 				</AccordionSummary>
 				<AccordionDetails sx={{ padding: "0px" }}>
-					<Box className="filterchild">
-						<ArrowForwardIosSharpIcon
-							sx={{ fontSize: "12px", marginRight: "6px" }}
-						/>
-						Exotic Fruits
-					</Box>
-					<Box className="filterchild">
-						<ArrowForwardIosSharpIcon
-							sx={{ fontSize: "12px", marginRight: "6px" }}
-						/>
-						Fresh Fruits
-					</Box>
-					<Box className="filterchild">
-						<ArrowForwardIosSharpIcon
-							sx={{ fontSize: "12px", marginRight: "6px" }}
-						/>
-						Fruite Combos
-					</Box>
-					<Box className="filterchild">
-						<ArrowForwardIosSharpIcon
-							sx={{ fontSize: "12px", marginRight: "6px" }}
-						/>
-						Mangoes
-					</Box>
+					{fruitFilter.map((ele, indx) => (
+						<Box className="filterchild" key={indx}>
+							<ArrowForwardIosSharpIcon
+								sx={{ fontSize: "12px", marginRight: "6px" }}
+							/>
+							{fruitFilter[indx]}
+						</Box>
+					))}
 				</AccordionDetails>
 			</Accordion>
 
 			<Accordion
-                disableGutters
-                sx={{boxShadow:"none",marginBottom:"0px",borderBottom:" 1px solid rgb(235, 235, 235)"}}
+				disableGutters
+				sx={{
+					boxShadow: "none",
+					marginBottom: "0px",
+					borderBottom: " 1px solid rgb(235, 235, 235)",
+				}}
 				expanded={expanded !== "panel1"}
 				onChange={() => handleChange("panel1")}
 			>
@@ -76,30 +83,14 @@ const Filter = () => {
 					<Typography>Fruits</Typography>
 				</AccordionSummary>
 				<AccordionDetails sx={{ padding: "0px" }}>
-					<Box className="filterchild">
-						<ArrowForwardIosSharpIcon
-							sx={{ fontSize: "12px", marginRight: "6px" }}
-						/>
-						Exotic Fruits
-					</Box>
-					<Box className="filterchild">
-						<ArrowForwardIosSharpIcon
-							sx={{ fontSize: "12px", marginRight: "6px" }}
-						/>
-						Fresh Fruits
-					</Box>
-					<Box className="filterchild">
-						<ArrowForwardIosSharpIcon
-							sx={{ fontSize: "12px", marginRight: "6px" }}
-						/>
-						Fruite Combos
-					</Box>
-					<Box className="filterchild">
-						<ArrowForwardIosSharpIcon
-							sx={{ fontSize: "12px", marginRight: "6px" }}
-						/>
-						Mangoes
-					</Box>
+					{vegFilter.map((ele, indx) => (
+						<Box className="filterchild" key={indx}>
+							<ArrowForwardIosSharpIcon
+								sx={{ fontSize: "12px", marginRight: "6px" }}
+							/>
+							{vegFilter[indx]}
+						</Box>
+					))}
 				</AccordionDetails>
 			</Accordion>
 		</Box>
