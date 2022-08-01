@@ -1,15 +1,22 @@
-.centerBox{
-    width: 90%;
-    border: 1px solid;
-    height: 100vh;
-    margin: 3% auto;
+.centerBox {
+  width: 90%;
+  border: 1px solid;
+  height: 100vh;
+  margin: 3% auto;
 }
-.carousalBox{
-    display:flex;
-    border: 1px solid;
-    flex-direction: column;
 
+.carousalBox {
+  margin: 1% 1% 1% 1%;
+  border-radius: 4px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  transition: box-shadow 0.8s;
 }
-.carousalBox img{
-    background-color: #f9f9f9;
+.carousalBox:hover {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.carousalBox > div > img {
+  background-color: #f9f9f9;
 }

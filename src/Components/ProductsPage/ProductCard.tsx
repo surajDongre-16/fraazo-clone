@@ -9,17 +9,17 @@ import Tooltip from '@mui/material/Tooltip';
 
 const ProductCard = ({ product }: any) => {
 	return (
-		<Box id="ProductCard">
-            <Box className={product["frz-priceslash-discount"]===""?"noDiscount":"discount"}>{product["frz-priceslash-discount"]}</Box>
+		<Box id="ProductCard" >
+            {product['frz-priceslash-discount'] &&<Box className={product["frz-priceslash-discount"]===""?"noDiscount":"discount"}>{product["frz-priceslash-discount"]}</Box>}
 			<img width="100%" src={product["lazy-image src"]} alt="" />
 			<p>{product["frz-fw-500"]}</p>
 			<Box>
 				<Box>
-					<p>{product["frz-pack-size"]}<Tooltip title={product["tooltiptext"]} placement="top"><InfoIcon sx={{fontSize:"16px",marginBottom:"-4px",marginLeft:"6px",opacity:"0.6"}}/></Tooltip></p>
+					<p>{product["frz-pack-size"]}{product.tooltiptext &&<Tooltip title={product["tooltiptext"]} placement="top"><InfoIcon sx={{fontSize:"16px",marginBottom:"-4px",marginLeft:"6px",opacity:"0.6"}}/></Tooltip>}</p>
 					<p>
 						<CurrencyRupeeIcon sx={{ fontSize: "16px", margin: "-2px" }} />{" "}
 						{product["frz-rp-10"]}
-						{product["frz-price-slash"]!==""?<span style={{opacity:"0.5",marginLeft:"10px"}}>
+						{product["frz-price-slash"]&&product["frz-price-slash"]!==""?<span style={{opacity:"0.5",marginLeft:"10px"}}>
 							<s>
 								<CurrencyRupeeIcon sx={{ fontSize: "16px", margin: "-2px" }} />
 								{product["frz-price-slash"]}
