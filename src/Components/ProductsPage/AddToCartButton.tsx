@@ -7,9 +7,6 @@ const AddToCartButton = ({ product }: any) => {
 	const [count, setCount] = useState(0);
 
 	const handleCart = (payload: number) => {
-		// if (count >= 1 && payload === -1) setCount(count + payload);
-		// else setCount(count + payload);
-
 		//@ts-ignore
 		const frazo_cart = JSON.parse(localStorage.getItem("frazo_cart")) || {};
 
@@ -49,10 +46,10 @@ const AddToCartButton = ({ product }: any) => {
 			.then((r) => r.json())
 			.then((data) =>
 				setCount(() => {
-					if(frazo_cart[product["frz-fw-500"]])
-					return frazo_cart[product["frz-fw-500"]].cart_quantity;
+					if (frazo_cart[product["frz-fw-500"]])
+						return frazo_cart[product["frz-fw-500"]].cart_quantity;
 
-					return 0
+					return 0;
 				})
 			);
 	};
