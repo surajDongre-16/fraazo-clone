@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Carousel from "better-react-carousel";
 import React from "react";
 import styles from "../../StyleSheets/CenterBox.module.css";
@@ -16,7 +16,7 @@ const Slider = ({ data }: any) => {
     <Box
       sx={{
         // width: "100%",
-        marginTop: "2%",
+        marginTop: "3%",
         height: "auto",
        
       }}
