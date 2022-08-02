@@ -151,77 +151,84 @@
 	border-bottom-right-radius: 12px;
 }
 
-
-#Cart{
-	padding:16px 30px;
+#Cart {
+	padding: 16px 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family:'Quicksand', sans-serif ;
+	font-family: "Quicksand", sans-serif;
 }
 
-#Cart>div:first-child{
+#Cart > div:first-child {
 	width: 95%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-#Cart img{
+#Cart img {
 	width: 50%;
 }
 
-
-#fullCart{
+#fullCart {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap:20px;
-	padding:16px 30px;
-	font-family:'Quicksand', sans-serif ;
+	gap: 20px;
+	padding: 16px 30px;
+	font-family: "Quicksand", sans-serif;
 }
 
-#fullCart>div:first-child{
+#fullCart > div:first-child {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-
-#fullCart img{
+#fullCart img {
 	width: 100%;
 	aspect-ratio: 1;
 	border: 1px solid rgb(220, 218, 218);
 	border-radius: 2px;
 }
 
-.CartChild{
+.CartChild {
 	display: grid;
 	width: 100%;
-	grid-template-columns: 20% 65% 10%;
-	gap:14px;
+	grid-template-columns: 20% 62% 13%;
+	gap: 14px;
 }
 
-
-.CartChild>div:nth-child(2)>P:first-child{
+.CartChild > div:nth-child(2) > P:first-child {
 	margin-top: 0px;
 	margin-bottom: 22px;
 	font-size: 16px;
 }
 
-.CartChild>div:nth-child(2)>P:nth-child(2){
+.CartChild > div:nth-child(2) > P:nth-child(2) {
 	font-size: 13px;
 	opacity: 0.7;
 }
 
-.CartChild>div:nth-child(3)>P:first-child{
+.CartChild > div:nth-child(3) > P:first-child {
 	margin-top: 0px;
 	font-size: 13px;
 	text-decoration: underline;
 }
 
-.CartChild>div:nth-child(3)>P:first-child:hover{
+.CartChild > div:nth-child(3) > P:first-child:hover {
 	cursor: pointer;
-	color:rgb(218, 88, 88)
+	color: rgb(218, 88, 88);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.MuiPaper-root::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.MuiPaper-root{
+	-ms-overflow-style:none; /* IE and Edge */
+	scrollbar-width:none; /* Firefox */
 }
