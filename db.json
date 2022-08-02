@@ -304,7 +304,7 @@
       "frz-fw-500": "Green Chillies",
       "frz-pack-size": "100 g",
       "frz-rp-10": 10,
-      "cart_quantity": 1
+      "cart_quantity": 2
     },
     "Drumstick": {
       "lazy-image src": "https://imagemaster.fraazo.com/fraazo-master/products/VDRU12.png?width=256&height=256&format=webp",
@@ -312,7 +312,7 @@
       "frz-pack-size": "100 g",
       "frz-price-slash": 15,
       "frz-rp-10": 12,
-      "cart_quantity": 1
+      "cart_quantity": 2
     },
     "Coconut": {
       "frz-product-card href": "https://fraazo.com/fruits/fresh-fruits/coconut-42",

@@ -70,6 +70,8 @@ const CartPage = () => {
 						</div>
 						<div>
 							<p>Remove</p>
+							{/*@ts-ignore*/}
+							<p>Quantity {ele.cart_quantity}</p>
 						</div>
 					</div>
 				))}

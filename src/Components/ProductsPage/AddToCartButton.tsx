@@ -5,8 +5,9 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { getCart } from "../../Redux/AppRedux/actions";
 import { useDispatch } from "react-redux";
 
-const AddToCartButton = ({ product }: any) => {
-	const [count, setCount] = useState(0);
+const AddToCartButton = ({ product,cartItem }: any) => {
+
+	const [count, setCount] = useState(cartItem[product["frz-fw-500"]]?cartItem[product["frz-fw-500"]].cart_quantity:0);
 	const dispatch=useDispatch()
 
 	const handleCart = (payload: number) => {

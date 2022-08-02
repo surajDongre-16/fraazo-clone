@@ -7,7 +7,8 @@ import InfoIcon from '@mui/icons-material/Info';
 import Tooltip from '@mui/material/Tooltip';
 
 
-const ProductCard = ({ product }: any) => {
+const ProductCard = ({ product,cartItem }: any) => {
+
 	return (
 		<Box id="ProductCard" >
             <Box className={product["frz-priceslash-discount"]?"discount":"noDiscount"}>{product["frz-priceslash-discount"]}</Box>
@@ -28,7 +29,7 @@ const ProductCard = ({ product }: any) => {
 					</p>
 				</Box>
 				<Box>
-					<AddToCartButton product={product} />
+					<AddToCartButton cartItem={cartItem} product={product} />
 				</Box>
 			</Box>
 		</Box>
