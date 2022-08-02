@@ -109,9 +109,9 @@ const Navbar = () => {
                 }}
                   anchor={"top"}
                   open={openCart}
-                  onClose={()=>setOpenCart(false)}
+                  onClose={()=>{setOpenCart(false)}}
                 >
-                <CartPage/>
+                <CartPage setOpenCart={setOpenCart}/>
               </Drawer>
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
