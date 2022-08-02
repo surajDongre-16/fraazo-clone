@@ -12,6 +12,7 @@ const bestDeals = [
     "frz-fw-500": "Drumstick",
     "frz-pack-size": "100 g",
     "frz-price-slash":15,
+    "frz-priceslash-discount": "20 % OFF",
     "frz-rp-10": 12,
   },
   {
@@ -26,13 +27,17 @@ const bestDeals = [
       "https://imageprod.fraazo.com/fraazo-prod/products/product_images/000/000/028/original/data?width=256&height=256&format=webp",
     "frz-fw-500": "Kateri Baingan (Brinjal)",
     "frz-pack-size": "250 g",
-    "frz-rp-10": 25,
+    "frz-priceslash-discount": "25 % OFF",
+    "frz-price-slash":40,
+    "frz-rp-10": 30,
   },
   {
     "lazy-image src":
       "https://imageprod.fraazo.com/fraazo-prod/products/product_images/000/003/250/original/data?width=256&height=256&format=webp",
     "frz-fw-500": "Lemon (Nimboo)",
     "frz-pack-size": "100 g",
+    "frz-priceslash-discount": "25 % OFF",
+    "frz-price-slash":15,
     "frz-rp-10": 10,
   },
   {
@@ -40,7 +45,9 @@ const bestDeals = [
       "https://imagemaster.fraazo.com/fraazo-master/products/ESWE13.png?width=256&height=256&format=webp",
     "frz-fw-500": "Sweet Corn (Bhutta)",
     "frz-pack-size": "1 pc",
-    "frz-rp-10": 22,
+    "frz-priceslash-discount": "20 % OFF",
+    "frz-price-slash":25,
+    "frz-rp-10": 20,
   },
   {
     "lazy-image src":
@@ -66,7 +73,7 @@ const bestDeals = [
   {
     "lazy-image src":
       "https://imagemaster.fraazo.com/fraazo-master/products/VCAP12.png?width=256&height=256&format=webp",
-    "frz-fw-500": "Green Capsicum (Shimla Mirchi)",
+    "frz-fw-500": "Green Capsicum",
     "frz-pack-size": "250 g",
     "frz-rp-10": 32,
   },
@@ -143,8 +150,10 @@ const fruits = [
       "https://imagemaster.fraazo.com/fraazo-master/products/FAVO21.png?width=256&height=256&format=webp",
     "frz-fw-500": "Indian Avocado",
     "frz-pack-size": "1 pc",
-    "frz-rp-10": 89,
+    "frz-rp-10": 80,
     tooltiptext: "",
+    "frz-price-slash":100,
+    "frz-priceslash-discount": "20 % OFF",
   },
   {
     "frz-product-card href":
@@ -155,6 +164,8 @@ const fruits = [
     "frz-pack-size": "1 pc",
     "frz-rp-10": 30,
     tooltiptext: "",
+    "frz-price-slash":38,
+    "frz-priceslash-discount": "25 % OFF",
   },
   {
     "frz-product-card href":
@@ -184,6 +195,8 @@ const fruits = [
     "frz-fw-500": "Mosambi (Sweet Lime)",
     "frz-pack-size": "1 kg",
     "frz-rp-10": 75,
+    "frz-price-slash":90,
+    "frz-priceslash-discount": "20 % OFF",
     tooltiptext: "",
   },
   {
@@ -246,7 +259,9 @@ const vegetables = [
       "https://imagemaster.fraazo.com/fraazo-master/products/VCHI22.png?width=256&height=256&format=webp",
     "frz-fw-500": "Green Chillies",
     "frz-pack-size": "100 g",
-    "frz-rp-10": 15,
+    "frz-rp-10": 12,
+    "frz-price-slash":15,
+    "frz-priceslash-discount": "20 % OFF",
     tooltiptext: "",
   },
   {
@@ -256,7 +271,9 @@ const vegetables = [
       "https://imagemaster.fraazo.com/fraazo-master/products/LCOR21.png?width=256&height=256&format=webp",
     "frz-fw-500": "Coriander Leaves (Dhania)",
     "frz-pack-size": "100 g",
-    "frz-rp-10": 31,
+    "frz-price-slash":30,
+    "frz-priceslash-discount": "10 % OFF",
+    "frz-rp-10": 27,
     tooltiptext: "",
   },
   {
@@ -267,6 +284,8 @@ const vegetables = [
     "frz-fw-500": "Curry Leaves",
     "frz-pack-size": "50 g",
     "frz-rp-10": 9,
+    "frz-price-slash":10,
+    "frz-priceslash-discount": "10 % OFF",
     tooltiptext: "",
   },
   {
@@ -286,7 +305,9 @@ const vegetables = [
       "https://imagemaster.fraazo.com/fraazo-master/products/BONI11.png?width=256&height=256&format=webp",
     "frz-fw-500": "Onion",
     "frz-pack-size": "1 kg",
-    "frz-rp-10": 26,
+    "frz-rp-10": 27,
+    "frz-price-slash":30,
+    "frz-priceslash-discount": "10 % OFF",
     tooltiptext: "",
   },
   {
@@ -307,6 +328,7 @@ const vegetables = [
     "frz-fw-500": "Portobello Mushroom",
     "frz-pack-size": "1 pkt",
     "frz-rp-10": 69,
+    "frz-price-slash":15,
     tooltiptext: "(Approx 200 g)",
   },
   {
