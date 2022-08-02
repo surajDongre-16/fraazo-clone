@@ -5,9 +5,15 @@ import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import AddToCartButton from "./AddToCartButton";
 import InfoIcon from '@mui/icons-material/Info';
 import Tooltip from '@mui/material/Tooltip';
+import { useSelector } from "react-redux";
 
 
 const ProductCard = ({ product }: any) => {
+
+	//@ts-ignore
+	const cartItem=useSelector(store=>store.AppReducer.cart)
+
+
 	return (
 		<Box id="ProductCard" >
             <Box className={product["frz-priceslash-discount"]?"discount":"noDiscount"}>{product["frz-priceslash-discount"]}</Box>
@@ -28,7 +34,7 @@ const ProductCard = ({ product }: any) => {
 					</p>
 				</Box>
 				<Box>
-					<AddToCartButton product={product} />
+					<AddToCartButton cartItem={cartItem} product={product} />
 				</Box>
 			</Box>
 		</Box>
