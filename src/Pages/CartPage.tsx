@@ -1,23 +1,62 @@
 import { Tooltip } from "@mui/material";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import InfoIcon from "@mui/icons-material/Info";
 import "../Components/ProductsPage/ProductPage.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import CloseIcon from "@mui/icons-material/Close";
+import { getCart } from "../Redux/AppRedux/actions";
 
-const CartPage = () => {
+const CartPage = ({ setOpenCart }: any) => {
+
+	const dispatch=useDispatch()
+
+
 	//@ts-ignore
 	const cartItems = useSelector((store) => store.AppReducer.cart);
 
 	const cartArray = Object.values(cartItems);
 	console.log(cartArray);
 
+	//@ts-ignore
+	const frazo_cart = JSON.parse(localStorage.getItem("frazo_cart")) || {};
+
+
+	const RemoveProduct=(ele:any)=>{
+		delete frazo_cart[ele["frz-fw-500"]]
+
+		fetch(`http://localhost:8080/cart`, {
+			method: "POST",
+			body: JSON.stringify(frazo_cart),
+			headers: { "content-type": "application/json" },
+		})
+			.then((r) => r.json())
+			.then((data) => {
+				// setCount(() => {
+				// 	if (frazo_cart[product["frz-fw-500"]])
+				// 		return frazo_cart[product["frz-fw-500"]].cart_quantity;
+
+				// 	return 0;
+				// });
+				//@ts-ignore
+				dispatch(getCart());
+
+				localStorage.setItem("frazo_cart", JSON.stringify(frazo_cart));
+			});
+	}
+
+
+
+
+
 	if (cartArray.length) {
 		return (
 			<div id="fullCart">
 				<div>
 					<h2>My Cart ({cartArray.length} items)</h2>
-					<CloseIcon />
+					<CloseIcon
+						sx={{ cursor: "pointer" }}
+						onClick={() => setOpenCart(false)}
+					/>
 				</div>
 				{cartArray.map((ele, indx: number) => (
 					<div key={indx} className="CartChild">
@@ -69,7 +108,7 @@ const CartPage = () => {
 							)}
 						</div>
 						<div>
-							<p>Remove</p>
+							<p onClick={()=>RemoveProduct(ele)}>Remove</p>
 							{/*@ts-ignore*/}
 							<p>Quantity {ele.cart_quantity}</p>
 						</div>
@@ -82,7 +121,10 @@ const CartPage = () => {
 			<div id="Cart">
 				<div>
 					<h2>My Cart ({cartArray.length} items)</h2>
-					<CloseIcon />
+					<CloseIcon
+						sx={{ cursor: "pointer" }}
+						onClick={() => setOpenCart(false)}
+					/>
 				</div>
 				<br />
 				<br />
@@ -97,7 +139,21 @@ const CartPage = () => {
 				<h2>Whoops... Cart is empty</h2>
 				<p>Add some fruits, veggies and dairy products to your cart.</p>
 				<br />
-				<button>Let's Shop!</button>
+				<button
+					style={{
+						cursor: "pointer",
+						padding: "14px 22px",
+						borderRadius: "26px 26px",
+						fontWeight: "600",
+						fontSize: "14px",
+						border: "2px solid #43c6ac",
+						backgroundColor: "#43c6ac",
+						color: "white",
+					}}
+					onClick={() => setOpenCart(false)}
+				>
+					Let's Shop!
+				</button>
 				<br />
 				<br />
 				<br />

@@ -1,14 +1,27 @@
 import { Button } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./ProductPage.css";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { getCart } from "../../Redux/AppRedux/actions";
 import { useDispatch } from "react-redux";
 
-const AddToCartButton = ({ product,cartItem }: any) => {
+const AddToCartButton = ({ product, cartItem }: any) => {
+	const [count, setCount] = useState(
+		cartItem[product["frz-fw-500"]]
+			? cartItem[product["frz-fw-500"]].cart_quantity
+			: 0
+	);
 
-	const [count, setCount] = useState(cartItem[product["frz-fw-500"]]?cartItem[product["frz-fw-500"]].cart_quantity:0);
-	const dispatch=useDispatch()
+
+	useEffect(()=>{
+		if(!cartItem[product["frz-fw-500"]])
+		setCount(0)
+	},[cartItem,setCount])
+
+
+
+
+	const dispatch = useDispatch();
 
 	const handleCart = (payload: number) => {
 		//@ts-ignore
@@ -18,28 +31,20 @@ const AddToCartButton = ({ product,cartItem }: any) => {
 			product.cart_quantity = 1;
 
 			frazo_cart[product["frz-fw-500"]] = product;
-
-			localStorage.setItem("frazo_cart", JSON.stringify(frazo_cart));
 		} else if (frazo_cart[product["frz-fw-500"]] && payload === 1) {
 			frazo_cart[product["frz-fw-500"]].cart_quantity++;
-
-			localStorage.setItem("frazo_cart", JSON.stringify(frazo_cart));
 		} else if (
 			frazo_cart[product["frz-fw-500"]] &&
 			frazo_cart[product["frz-fw-500"]].cart_quantity > 1 &&
 			payload === -1
 		) {
 			frazo_cart[product["frz-fw-500"]].cart_quantity--;
-
-			localStorage.setItem("frazo_cart", JSON.stringify(frazo_cart));
 		} else if (
 			frazo_cart[product["frz-fw-500"]] &&
 			frazo_cart[product["frz-fw-500"]].cart_quantity === 1 &&
 			payload === -1
 		) {
 			delete frazo_cart[product["frz-fw-500"]];
-
-			localStorage.setItem("frazo_cart", JSON.stringify(frazo_cart));
 		}
 
 		fetch(`http://localhost:8080/cart`, {
@@ -48,17 +53,19 @@ const AddToCartButton = ({ product,cartItem }: any) => {
 			headers: { "content-type": "application/json" },
 		})
 			.then((r) => r.json())
-			.then((data) =>{
+			.then((data) => {
 				setCount(() => {
 					if (frazo_cart[product["frz-fw-500"]])
 						return frazo_cart[product["frz-fw-500"]].cart_quantity;
 
 					return 0;
-				})
+				});
+
 				//@ts-ignore
-				dispatch(getCart())
-			}
-			);
+				dispatch(getCart());
+
+				localStorage.setItem("frazo_cart", JSON.stringify(frazo_cart));
+			});
 	};
 
 	if (!count) {
