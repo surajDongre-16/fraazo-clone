@@ -4,9 +4,12 @@ import "./ProductPage.css";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import ProductCard from "./ProductCard";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const ProductList = () => {
 	const [products, setProducts] = useState([]);
+	//@ts-ignore
+	const cartItem=useSelector(store=>store.AppReducer.cart)
 
 	useEffect(() => {
 		axios
@@ -46,7 +49,7 @@ const ProductList = () => {
 				</Typography>
 				<Box id="productList">
 					{products.map((ele, indx) => (
-						<ProductCard key={indx} product={ele} />
+						<ProductCard key={indx} cartItem={cartItem} product={ele} />
 					))}
 				</Box>
 			</Box>

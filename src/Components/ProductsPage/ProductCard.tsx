@@ -5,14 +5,9 @@ import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import AddToCartButton from "./AddToCartButton";
 import InfoIcon from '@mui/icons-material/Info';
 import Tooltip from '@mui/material/Tooltip';
-import { useSelector } from "react-redux";
 
 
-const ProductCard = ({ product }: any) => {
-
-	//@ts-ignore
-	const cartItem=useSelector(store=>store.AppReducer.cart)
-
+const ProductCard = ({ product,cartItem }: any) => {
 
 	return (
 		<Box id="ProductCard" >

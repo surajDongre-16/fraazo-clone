@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Carousel from "better-react-carousel";
 import React from "react";
+import { useSelector } from "react-redux";
 import styles from "../../StyleSheets/CenterBox.module.css";
 import ProductCard from "../ProductsPage/ProductCard";
 
@@ -12,6 +13,10 @@ interface dataItem {
 }
 
 const Slider = ({ data }: any) => {
+
+  //@ts-ignore
+	const cartItem=useSelector(store=>store.AppReducer.cart)
+
   return (
     <Box
       sx={{
@@ -25,7 +30,7 @@ const Slider = ({ data }: any) => {
         {data.map((item: dataItem, index: number) => (
           <Carousel.Item key={index}>
             <Box className={styles.carousalBox}>
-              <ProductCard key={index} product={item} />
+              <ProductCard key={index} cartItem={cartItem} product={item} />
             </Box>
           </Carousel.Item>
         ))}
