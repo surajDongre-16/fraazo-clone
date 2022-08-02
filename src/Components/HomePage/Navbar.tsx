@@ -10,6 +10,7 @@ import CategoryBox from "./CategoryBox";
 import {Drawer} from "@mui/material"
 import CartPage from "../../Pages/CartPage";
 import { useSelector } from "react-redux";
+import "../ProductsPage/ProductPage.css"
 
 
 const Navbar = () => {
