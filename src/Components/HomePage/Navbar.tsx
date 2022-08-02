@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Typography } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -7,7 +7,21 @@ import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import PersonIcon from "@mui/icons-material/Person";
 import styles from "../../StyleSheets/Navbar.module.css";
 import CategoryBox from "./CategoryBox";
+import {Drawer} from "@mui/material"
+import CartPage from "../../Pages/CartPage";
+import { useSelector } from "react-redux";
+
+
 const Navbar = () => {
+
+  //@ts-ignore
+	const cartItems = useSelector((store) => store.AppReducer.cart);
+
+	const cartArray = Object.values(cartItems)
+
+  const [openCart,setOpenCart]=useState(false)
+
+
   return (
     <>
       <Box
@@ -83,10 +97,21 @@ const Navbar = () => {
             }}
           >
             <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <Box className={styles.superlative}>0</Box>
-              <Typography className={styles.navbarIcon}>
+              <Box className={styles.superlative}>{cartArray.length}</Box>
+              <Typography className={styles.navbarIcon}  onClick={()=>setOpenCart(true)} >
                 <ShoppingCartIcon /> Cart
               </Typography>
+              <Drawer
+                transitionDuration={400}
+                PaperProps={{
+                  sx: { width: "550px",height:"1000px",left:"unset"}
+                }}
+                  anchor={"top"}
+                  open={openCart}
+                  onClose={()=>setOpenCart(false)}
+                >
+                <CartPage/>
+              </Drawer>
             </Box>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Box className={styles.superlativeCredit}>₹ 0</Box>

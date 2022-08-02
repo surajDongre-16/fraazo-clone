@@ -11,6 +11,7 @@ const bestDeals = [
       "https://imagemaster.fraazo.com/fraazo-master/products/VDRU12.png?width=256&height=256&format=webp",
     "frz-fw-500": "Drumstick",
     "frz-pack-size": "100 g",
+    "frz-price-slash":15,
     "frz-rp-10": 12,
   },
   {
@@ -253,7 +254,7 @@ const vegetables = [
       "https://fraazo.com/vegetables/herbs-leafies/coriander-leaves-dhania-kothimbir-43",
     "lazy-image src":
       "https://imagemaster.fraazo.com/fraazo-master/products/LCOR21.png?width=256&height=256&format=webp",
-    "frz-fw-500": "Coriander Leaves (Dhania/Kothimbir)",
+    "frz-fw-500": "Coriander Leaves (Dhania)",
     "frz-pack-size": "100 g",
     "frz-rp-10": 31,
     tooltiptext: "",

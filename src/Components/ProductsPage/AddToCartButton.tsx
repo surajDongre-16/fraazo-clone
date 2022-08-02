@@ -2,9 +2,12 @@ import { Button } from "@mui/material";
 import { useState } from "react";
 import "./ProductPage.css";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { getCart } from "../../Redux/AppRedux/actions";
+import { useDispatch } from "react-redux";
 
 const AddToCartButton = ({ product }: any) => {
 	const [count, setCount] = useState(0);
+	const dispatch=useDispatch()
 
 	const handleCart = (payload: number) => {
 		//@ts-ignore
@@ -44,13 +47,16 @@ const AddToCartButton = ({ product }: any) => {
 			headers: { "content-type": "application/json" },
 		})
 			.then((r) => r.json())
-			.then((data) =>
+			.then((data) =>{
 				setCount(() => {
 					if (frazo_cart[product["frz-fw-500"]])
 						return frazo_cart[product["frz-fw-500"]].cart_quantity;
 
 					return 0;
 				})
+				//@ts-ignore
+				dispatch(getCart())
+			}
 			);
 	};
 
