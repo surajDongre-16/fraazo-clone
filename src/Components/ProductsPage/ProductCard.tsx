@@ -10,7 +10,7 @@ import Tooltip from '@mui/material/Tooltip';
 const ProductCard = ({ product }: any) => {
 	return (
 		<Box id="ProductCard" >
-            {product['frz-priceslash-discount'] &&<Box className={product["frz-priceslash-discount"]===""?"noDiscount":"discount"}>{product["frz-priceslash-discount"]}</Box>}
+            <Box className={product["frz-priceslash-discount"]?"discount":"noDiscount"}>{product["frz-priceslash-discount"]}</Box>
 			<img width="100%" src={product["lazy-image src"]} alt="" />
 			<p>{product["frz-fw-500"]}</p>
 			<Box>

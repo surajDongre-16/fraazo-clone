@@ -54,6 +54,7 @@
 
 #ProductCard {
 	padding: 0px 16px;
+	padding-bottom: 5px;
 }
 
 #ProductCard:hover {
@@ -134,18 +135,93 @@
 
 .noDiscount {
 	opacity: 0;
-	height: 20px;
+	height: 22px;
 }
 
 .discount {
-	height: 24px;
+	height: 22px;
 	color: white;
 	background-color: #fe6d0f;
 	border-top-left-radius: 4px;
 	max-width: fit-content;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: 600;
 	margin-left: -16px;
 	padding: 0px 10px;
 	border-bottom-right-radius: 12px;
+}
+
+
+#Cart{
+	padding:16px 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family:'Quicksand', sans-serif ;
+}
+
+#Cart>div:first-child{
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#Cart img{
+	width: 50%;
+}
+
+
+#fullCart{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap:20px;
+	padding:16px 30px;
+	font-family:'Quicksand', sans-serif ;
+}
+
+#fullCart>div:first-child{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+#fullCart img{
+	width: 100%;
+	aspect-ratio: 1;
+	border: 1px solid rgb(220, 218, 218);
+	border-radius: 2px;
+}
+
+.CartChild{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 20% 65% 10%;
+	gap:14px;
+}
+
+
+.CartChild>div:nth-child(2)>P:first-child{
+	margin-top: 0px;
+	margin-bottom: 22px;
+	font-size: 16px;
+}
+
+.CartChild>div:nth-child(2)>P:nth-child(2){
+	font-size: 13px;
+	opacity: 0.7;
+}
+
+.CartChild>div:nth-child(3)>P:first-child{
+	margin-top: 0px;
+	font-size: 13px;
+	text-decoration: underline;
+}
+
+.CartChild>div:nth-child(3)>P:first-child:hover{
+	cursor: pointer;
+	color:rgb(218, 88, 88)
 }
