@@ -3,6 +3,9 @@
     margin: 2% auto;
     width: 90%;
     display: flex;
+}
 
 
+*{
+	font-family:"Quicksand", sans-serif;
 }

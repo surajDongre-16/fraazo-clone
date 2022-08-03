@@ -4,6 +4,11 @@
   margin: 3% auto;
 }
 
+
+*{
+	font-family:"Quicksand", sans-serif;
+}
+
 .carousalBox {
   margin: 1% 1% 1% 1%;
   border-radius: 4px;
