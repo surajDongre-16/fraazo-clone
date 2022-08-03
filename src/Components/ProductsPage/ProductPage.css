@@ -8,6 +8,13 @@
 	border-bottom: 1px solid rgb(232, 231, 231);
 }
 
+*,
+.MuiBox-root,
+.MuiTypography-root,
+.MuiButton-root {
+	font-family: "Quicksand", sans-serif;
+}
+
 #productNav > div {
 	padding: 0px 20px;
 }
@@ -89,7 +96,7 @@
 #addButton {
 	border-radius: 18px;
 	font-size: 14px;
-	padding: 2px 14px;
+	padding: 2px 14px 3px;
 	color: #02cb7b;
 	border: 1px solid #00ba70;
 }
@@ -123,7 +130,7 @@
 	font-size: 22px;
 	line-height: 22px;
 	min-width: 30px;
-	padding: 2px 4px 2px 0px;
+	padding: 1px 3px 3px 1px;
 	color: #02cb7b;
 	border: 1px solid #00ba70;
 }
@@ -176,14 +183,19 @@
 	align-items: center;
 	gap: 20px;
 	padding: 16px 30px;
-	font-family: "Quicksand", sans-serif;
 }
 
 #fullCart > div:first-child {
 	width: 100%;
 	display: flex;
+	padding-top: 20px;
+	padding-bottom: 10px;
 	justify-content: space-between;
 	align-items: center;
+}
+
+#fullCart > div:first-child h2 {
+	margin: 0px;
 }
 
 #fullCart img {
@@ -212,14 +224,15 @@
 }
 
 .CartChild > div:nth-child(3) > P:first-child {
-	margin-top: 0px;
+	margin-top: 3px;
 	font-size: 13px;
 	text-decoration: underline;
-	color:rgb(244, 137, 137);
+	color: rgb(244, 137, 137);
 }
 
 .CartChild > div:nth-child(3) > P:last-child {
 	color: rgb(3, 198, 3);
+	margin-bottom: 14px;
 }
 
 .CartChild > div:nth-child(3) > P:first-child:hover {
@@ -227,7 +240,7 @@
 	color: red;
 }
 
-.CartChild > div:nth-child(3){
+.CartChild > div:nth-child(3) {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -240,7 +253,7 @@
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.MuiPaper-root{
-	-ms-overflow-style:none; /* IE and Edge */
-	scrollbar-width:none; /* Firefox */
+.MuiPaper-root {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }

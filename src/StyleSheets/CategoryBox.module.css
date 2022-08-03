@@ -8,6 +8,11 @@
   color: gray;
 }
 
+
+*{
+	font-family:"Quicksand", sans-serif;
+}
+
 .subCategory {
   border: 1px solid;
   height: 100px;

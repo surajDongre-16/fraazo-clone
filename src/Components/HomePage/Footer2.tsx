@@ -189,7 +189,7 @@ const Footer2 = () => {
             sx={{
               borderTop: "1px solid",
               marginTop: "2%",
-              paddingTop: "2%",
+              padding: "2%",
               color: "#a8bfb8",
               textAlign: "center",
             }}
