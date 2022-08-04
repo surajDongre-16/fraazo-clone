@@ -21,9 +21,10 @@
 
 #ProductPageBody {
 	padding: 38px 30px;
+	padding-right: 60px;
 	padding-left: 10px;
 	display: grid;
-	grid-template-columns: 280px auto;
+	grid-template-columns: 250px auto;
 	gap: 20px;
 }
 
