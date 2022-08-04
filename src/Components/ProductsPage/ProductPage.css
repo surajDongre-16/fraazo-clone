@@ -90,7 +90,7 @@
 }
 
 #ProductCard > div > div > p:last-child {
-	margin-top: 4px;
+	margin-top: 8px;
 	margin-bottom: 10px;
 }
 
@@ -164,7 +164,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: "Quicksand", sans-serif;
 }
 
 #Cart > div:first-child {
@@ -183,20 +182,31 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 20px;
-	padding: 16px 30px;
+	padding: 0px 30px;
 }
 
 #fullCart > div:first-child {
-	width: 100%;
+	position:fixed;
+	width: 550px;
 	display: flex;
 	padding-top: 20px;
 	padding-bottom: 10px;
 	justify-content: space-between;
 	align-items: center;
+	background-color: white ;
+}
+
+#fullCart > div:nth-child(2){
+	margin-top: 85px;
 }
 
 #fullCart > div:first-child h2 {
 	margin: 0px;
+	padding:10px 0px 10px 29px;
+}
+
+#fullCart > div:first-child svg{
+	padding-right: 32px;
 }
 
 #fullCart img {
@@ -221,7 +231,7 @@
 
 .CartChild > div:nth-child(2) > P:nth-child(2) {
 	font-size: 13px;
-	opacity: 0.7;
+	color:rgb(151, 151, 151)
 }
 
 .CartChild > div:nth-child(3) > P:first-child {

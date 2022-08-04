@@ -7,9 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { getCart } from "../Redux/AppRedux/actions";
 
 const CartPage = ({ setOpenCart }: any) => {
-
-	const dispatch=useDispatch()
-
+	const dispatch = useDispatch();
 
 	//@ts-ignore
 	const cartItems = useSelector((store) => store.AppReducer.cart);
@@ -20,9 +18,8 @@ const CartPage = ({ setOpenCart }: any) => {
 	//@ts-ignore
 	const frazo_cart = JSON.parse(localStorage.getItem("frazo_cart")) || {};
 
-
-	const RemoveProduct=(ele:any)=>{
-		delete frazo_cart[ele["frz-fw-500"]]
+	const RemoveProduct = (ele: any) => {
+		delete frazo_cart[ele["frz-fw-500"]];
 
 		fetch(`http://localhost:8080/cart`, {
 			method: "POST",
@@ -42,11 +39,7 @@ const CartPage = ({ setOpenCart }: any) => {
 
 				localStorage.setItem("frazo_cart", JSON.stringify(frazo_cart));
 			});
-	}
-
-
-
-
+	};
 
 	if (cartArray.length) {
 		return (
@@ -68,7 +61,7 @@ const CartPage = ({ setOpenCart }: any) => {
 							{/*@ts-ignore*/}
 							<p>{ele["frz-fw-500"]}</p>
 
-							<p>
+							<p >
 								{/*@ts-ignore*/}
 								{ele["frz-pack-size"]}
 								{/*@ts-ignore*/}
@@ -80,7 +73,7 @@ const CartPage = ({ setOpenCart }: any) => {
 												fontSize: "16px",
 												marginBottom: "-4px",
 												marginLeft: "6px",
-												opacity: "0.6",
+												color: "rgb(151, 151, 151)",
 											}}
 										/>
 									</Tooltip>
@@ -94,7 +87,7 @@ const CartPage = ({ setOpenCart }: any) => {
 							</b>
 							{/*@ts-ignore*/}
 							{ele["frz-price-slash"] && ele["frz-price-slash"] !== "" ? (
-								<span style={{ opacity: "0.7", marginLeft: "10px" }}>
+								<span style={{ color: "rgb(151, 151, 151)", marginLeft: "10px" }}>
 									<s>
 										<CurrencyRupeeIcon
 											sx={{ fontSize: "16px", margin: "-2px" }}
@@ -108,7 +101,7 @@ const CartPage = ({ setOpenCart }: any) => {
 							)}
 						</div>
 						<div>
-							<p onClick={()=>RemoveProduct(ele)}>Remove</p>
+							<p onClick={() => RemoveProduct(ele)}>Remove</p>
 							{/*@ts-ignore*/}
 							<p>Quantity {ele.cart_quantity}</p>
 						</div>
