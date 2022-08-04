@@ -80,7 +80,7 @@ const Filter = () => {
 					aria-controls="panel1d-content"
 					id="panel1d-header"
 				>
-					<Typography>Fruits</Typography>
+					<Typography>Vegetables</Typography>
 				</AccordionSummary>
 				<AccordionDetails sx={{ padding: "0px" }}>
 					{vegFilter.map((ele, indx) => (
