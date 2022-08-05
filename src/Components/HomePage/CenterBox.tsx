@@ -245,7 +245,7 @@ const fruits = [
 			"https://fraazo.com/fruits/fruit-combo/coconut-combo-2-pcs-coconuts-445",
 		"lazy-image src":
 			"https://imageprod.fraazo.com/fraazo-prod/products/product_images/000/000/445/original/data?width=256&height=256&format=webp",
-		"frz-fw-500": "Coconut Combo (2 pcs Coconuts)",
+		"frz-fw-500": "Coconut Combo (2 pcs)",
 		"frz-pack-size": "1 combo",
 		"frz-rp-10": 60,
 		tooltiptext: "",
