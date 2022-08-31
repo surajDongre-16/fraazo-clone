@@ -40,6 +40,18 @@ const CategoryBox = () => {
      setVegEl(null);
    };
 
+   const handleAll = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.clientX <= 650 || event.clientX >= 730) {
+      setAnchorEl(null);
+    }
+    if (event.clientX <= 750 || event.clientX >= 850) {
+     setVegEl(null);
+    }
+    if(event.clientY<=100){
+      setAnchorEl(null);
+      setVegEl(null);
+    }
+   };
 
   return (
     <Box className={styles.mainBox}>
@@ -55,6 +67,7 @@ const CategoryBox = () => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onMouseEnter={handleClick}
+        onMouseMove={handleAll}
       >
         <Typography sx={{ fontSize: "15px", fontWeight: "100" }}>
           Fruits
@@ -90,6 +103,7 @@ const CategoryBox = () => {
         aria-haspopup="true"
         aria-expanded={openVeg ? "true" : undefined}
         onMouseEnter={handleVegis}
+        onMouseMove={handleAll}
       >
         <Typography sx={{ fontSize: "15px", fontWeight: "100" }}>
           Vegitables
