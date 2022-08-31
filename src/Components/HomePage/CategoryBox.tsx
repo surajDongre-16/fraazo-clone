@@ -1,6 +1,6 @@
-import { Typography } from "@mui/material";
+import { Menu, MenuItem, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import styles from "../../StyleSheets/CategoryBox.module.css";
 
@@ -19,24 +19,30 @@ const fruitsData = [
 ];
 
 const CategoryBox = () => {
-  const [fruits, setFruits] = useState(false);
-  const [vegis, setVegis] = useState(false);
-  const handleEnter = (val: string) => {
-    if (val === "fruits") {
-      setFruits(true);
-      setVegis(false);
-    } else if (val === "vegis") {
-      setFruits(false);
-      setVegis(true);
-    }
-  };
-  const handleLeave = () => {
-    setFruits(false);
-    setVegis(false);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const [vegEl, setVegEl] = React.useState<null | HTMLElement>(null);
+
+  const open = Boolean(anchorEl);
+  const openVeg = Boolean(vegEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    setAnchorEl(event.currentTarget);
   };
 
+   const handleVegis = (event: React.MouseEvent<HTMLDivElement>) => {
+     setVegEl(event.currentTarget);
+   };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+   const handleCloseVegis = () => {
+     setVegEl(null);
+   };
+
+
   return (
-    <Box className={styles.mainBox} onMouseLeave={handleLeave}>
+    <Box className={styles.mainBox}>
       <Box
         sx={{
           display: "flex",
@@ -44,57 +50,72 @@ const CategoryBox = () => {
           cursor: "pointer",
           position: "relative",
         }}
-        onMouseEnter={() => handleEnter("fruits")}
+        id="basic-button"
+        aria-controls={open ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onMouseEnter={handleClick}
       >
         <Typography sx={{ fontSize: "15px", fontWeight: "100" }}>
           Fruits
-        </Typography>{" "}
+        </Typography>
         <KeyboardArrowDownIcon />
-        {fruits ? (
-          <>
-            <Box
-              className={styles.subCategory}
-              onMouseLeave={handleLeave}
-              //   onMouseEnter={() => handleEnter("fruits")}
-            >
-              {fruitsData.map((item) => (
-                <Typography
-                  sx={{ fontSize: "15px", fontWeight: "100" }}
-                >
-                  {item.title}
-                </Typography>
-              ))}
-            </Box>
-          </>
-        ) : (
-          ""
-        )}
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            "aria-labelledby": "basic-button",
+          }}
+        >
+          <Box onMouseLeave={handleClose}>
+            {fruitsData.map((item) => (
+              <MenuItem
+                key={item.title}
+                sx={{ fontSize: "15px", fontWeight: "100" }}
+                onClick={handleClose}
+              >
+                {item.title}
+              </MenuItem>
+            ))}
+          </Box>
+        </Menu>
       </Box>
+
       <Box
         sx={{ display: "flex", cursor: "pointer", position: "relative" }}
-        onMouseEnter={() => handleEnter("vegis")}
-        // onMouseLeave={handleLeave}
+        id="basic-btn"
+        aria-controls={openVeg ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={openVeg ? "true" : undefined}
+        onMouseEnter={handleVegis}
       >
         <Typography sx={{ fontSize: "15px", fontWeight: "100" }}>
           Vegitables
-        </Typography>{" "}
+        </Typography>
         <KeyboardArrowDownIcon />
-        {vegis ? (
-          <>
-            <Box
-              className={styles.subCategoryVeggies}
-              onMouseLeave={handleLeave}
-            >
-              {veggies.map((item) => (
-                <Typography sx={{ fontSize: "15px", fontWeight: "100" }}>
-                  {item.title}
-                </Typography>
-              ))}
-            </Box>
-          </>
-        ) : (
-          ""
-        )}
+        <Menu
+          id="basic-menu"
+          anchorEl={vegEl}
+          open={openVeg}
+          onClose={handleCloseVegis}
+          MenuListProps={{
+            "aria-labelledby": "basic-btn",
+          }}
+        >
+          <Box onMouseLeave={handleCloseVegis}>
+            {veggies.map((item) => (
+              <MenuItem
+                key={item.title}
+                sx={{ fontSize: "15px", fontWeight: "100" }}
+                onClick={handleCloseVegis}
+              >
+                {item.title}
+              </MenuItem>
+            ))}
+          </Box>
+        </Menu>
       </Box>
     </Box>
   );
